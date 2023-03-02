@@ -1,0 +1,353 @@
+html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            
+        }
+
+        body{
+            background: url("img/hero.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        body:after{
+            animation: grain 1s steps(10) infinite;
+            background-image: url("img/grains.png");
+            content: "";
+            height: 300%;
+            left: -50%;
+            opacity: 0.8;
+            position: fixed;
+            top:-110%;
+            width: 300%;
+            z-index: 0;
+        }
+
+        @keyframes grain {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-5%, -10%); }
+            20% { transform: translate(-15%, 5%); }
+            30% { transform: translate(7%, -25%); }
+            40% { transform: translate(-5%, 25%); }
+            50% { transform: translate(-15%, 10%); }
+            60% { transform: translate(15%, 0); }
+            70% { transform: translate(0, 15%); }
+            80% { transform: translate(3%, 35%); }
+            90% { transform: translate(-10%, 10%); }
+        }
+
+        #hortizonal-nav{
+            margin: 0; padding: 0;
+                height: 9.15vh;
+        }
+
+        #hortizonal-nav nav{
+            width: 100%;
+        }
+
+        #hortizonal-nav .navbar-nav .nav-link{
+            color: #fefefe;
+            font-weight: 500;
+            padding: 0 0 0 0;
+            margin-left: .5rem;
+            margin-right: .5rem;
+            border-bottom: 2px solid #00c4ff00;
+        }
+
+        #hortizonal-nav .navbar-nav .nav-link:hover{
+            border-bottom: 2px solid #00c4ff;
+        }
+
+        #hortizonal-nav .navbar-nav .nav-link.shine{
+          text-shadow:0px 3px 3px rgba(205,208,216,1);
+        }
+
+        .landing{
+            height: 90.6vh;
+        }
+
+        .landing .distortion,
+        .landing .distortion canvas{
+            padding-right: 0px;
+    padding-left: 25px;
+            width: 100%!important;
+            height: 99.8%!important;
+        }
+
+        .landing .intro,
+        .landing .distortion canvas,
+        .cards,
+        .moreslider,
+        .title,
+        .mapouter,
+        .contact-footer{
+            position: relative;
+            z-index: 1;
+        }
+
+        .landing .intro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .landing .intro h1{
+            font-size: 4.5rem;
+            margin: 0px;
+            color: #fefefe;
+            font-weight: 800;
+            text-shadow: 0px 3px 3px rgb(0, 0, 0);
+        }
+
+        .landing .intro p,
+        .title span{
+                color: #fefefe73;
+        }
+
+
+        .card0 {
+            border: 1px solid rgba(255,255,255,0.1);
+            height: 220px;
+            -webkit-transition: 1s !important;
+        }
+
+        .card0:hover:before{
+            -webkit-transition: 1s!important;
+            content: "";
+            position: absolute;
+            top: -100px;
+            left: 100px;
+            width: 280px;
+            height: 280px;
+            z-index: -1;
+        }
+
+        .card1.card0:hover::before,
+        .card2.card0:hover::before,
+        .card3.card0:hover::before,
+        .card5.card0:hover::before,
+        .card6.card0:hover::before,
+        .card7.card0:hover::before{
+             animation: go-left 3.2s ease-in-out;
+        }
+
+        .card4.card0:hover::before,
+        .card8.card0:hover::before{
+             animation: go-right 3.2s ease-in-out;
+        }
+@keyframes go-left {
+     0% {
+          opacity: 0;
+          left: 70px;
+     }
+
+     20% {
+          opacity: 1;
+          left: 100px;
+     }
+
+     100% {
+          opacity: 1;
+          left: 100px;
+     }
+}
+
+@keyframes go-right {
+     0% {
+          opacity: 0;
+          left: -45px;
+     }
+
+     20% {
+          opacity: 1;
+          left: -60px;
+     }
+
+     100% {
+          opacity: 1;
+          left: -60px;
+     }
+}
+
+        .card1.card0:hover::before{
+            background: url("img/team1.jpg");
+        }
+        .card2.card0:hover::before{
+            background: url("img/team2.jpg");
+        }
+        .card3.card0:hover::before{
+            background: url("img/team3.jpg");
+        }
+        .card4.card0:hover::before{
+            background: url("img/team1.jpg");
+        }
+        .card5.card0:hover::before{
+            background: url("img/team2.jpg");
+        }
+        .card6.card0:hover::before{
+            background: url("img/team3.jpg");
+        }
+        .card7.card0:hover::before{
+            background: url("img/team1.jpg");
+        }
+        .card8.card0:hover::before{
+            background: url("img/team2.jpg");
+        }
+
+        @keyframes anim{
+            0%{
+                opacity: 0;
+                left: 70px;
+            }
+            20%{
+                opacity: 1;
+                left: 100px;
+            }
+            100%{
+                opacity: 1;
+                left: 100px;
+            }
+        }
+
+        .center-top{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .landing .cards .card0 h5.name{
+            color: #fff;
+    margin: 48px 0 2px 4px;
+    font-size: 16px;
+        }
+
+        .landing .cards .card0 h5.name:before{
+position: absolute;
+    content: "";
+    top: 50px;
+    left: -2px;
+    width: 2px;
+    height: 22px;
+    display: block;
+    background: #fff;
+
+        }
+
+.landing .cards .card0 p.desc{
+    color: grey;
+    margin-left: 4px;
+    font-size: 14px;
+    margin-bottom: 70px !important;
+}
+
+
+.landing .cards .card0 a.more{
+    margin-left: 4px;
+    color: lightgrey!important;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+
+}
+.landing .cards .card0 a.more:hover{
+        text-decoration: none;
+    color: grey!important;
+}
+
+
+.title{
+    color: #fefefe;
+    text-align: center;
+    width: 100%;
+}
+
+.title span{
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+}
+
+.mapouter{
+    text-align:right;
+    padding-bottom: 56.25%;
+    padding-top: 86px;
+    height: 0;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:none!important
+}
+
+.left{
+    text-align: left!important;
+}
+@media (max-width: 991px) {
+	.modelspg .landing.center-top{
+           	height: auto!important;
+        }
+
+    .card4.card0:hover::before,
+        .card8.card0:hover::before{
+             animation: go-left 3.2s ease-in-out!important;
+        }
+
+        .card0:hover::before{
+    top: -50px!important;
+    width: 200px!important;
+    height: 200px!important;
+}
+}
+@media (max-width: 767px) {
+  
+  .welcomepg .landing{
+           	height: 100vh!important;
+        }
+  .landing .distortion canvas {
+    padding-right: 0px;
+    padding-left: 0px!important;
+    width: 85%!important;
+    height: 76.8%!important;
+}
+.landing .distortion{
+    text-align: center;
+}
+}
+
+@media (max-width: 466px) {
+	.landing .distortion canvas {
+		    height: 55%!important
+	}
+}
+
+.contact-header{
+    height: 20em;
+    background: url("img/contact.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contact-header h1{
+    margin-left: 10%;
+    text-align: left!important;
+    font-size:calc(40px + 1.5vw);
+}
+
+.contact-footer{
+    padding-top: 7%;
+    padding-left: 10%;
+    color: #9e9393;
+}
